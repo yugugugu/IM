@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.yugugugu.server.ddd.infrastructure.dao.IUserDao">
+    <select id="queryUserPassword" resultType="java.lang.String">
+        select userPassword FROM user where userId = #{userId}
+    </select>
+    <select id="queryUserById" resultType="com.yugugugu.server.ddd.infrastructure.po.User">
+        select userId, userNickName, userHead from user where userId = #{userId}
+    </select>
+    <select id="queryFuzzUserList" resultType="com.yugugugu.server.ddd.infrastructure.po.User">
+        select userId,userNickName,userHead
+        from user where userId != #{userId} and (userId like "%"#{searchKey}"%" or userNickName like "%"#{searchKey}"%")
+        order by id desc
+    </select>
+</mapper>
