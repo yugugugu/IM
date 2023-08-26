@@ -1,6 +1,7 @@
 package com.yugugugu.server.ddd.domain.user.repository;
 
 import com.yugugugu.server.ddd.domain.user.model.*;
+import com.yugugugu.server.ddd.infrastructure.po.TalkBox;
 import com.yugugugu.server.ddd.infrastructure.po.UserFriend;
 
 import java.util.List;
@@ -34,4 +35,12 @@ public interface IUserRepository {
     void addUserFriend(List<UserFriend> userFriendList);
 
     List<LuckUserInfo> queryFuzzUserInfoList(String userId, String searchKey);
+
+    void addTalkBoxInfo(String userId, String talkId, int talkType);
+
+    void deleteUserTalk(String userId, String talkId);
+
+    void appendChatRecord(ChatRecordInfo chatRecordInfo);
+
+    TalkBox queryTalkBox(String userId, String talkId, int talkType);
 }

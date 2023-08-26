@@ -1,5 +1,6 @@
 package com.yugugugu.server.ddd.infrastructure.dao;
 
+import com.yugugugu.server.ddd.domain.user.model.ChatRecordInfo;
 import com.yugugugu.server.ddd.infrastructure.po.ChatRecord;
 import org.apache.ibatis.annotations.Mapper;
 
@@ -19,4 +20,5 @@ public interface IChatRecordDao {
 
     List<ChatRecord> queryGroupsChatRecordList(String talkId, String userId);
 
+    void asyncAppendChatRecord(ChatRecordInfo chatRecordInfo);
 }

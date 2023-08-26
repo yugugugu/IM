@@ -1,5 +1,6 @@
 package com.yugugugu.server.ddd.infrastructure.repository;
 
+import com.yugugugu.server.aggement.protocol.login.dto.ChatRecordDto;
 import com.yugugugu.server.ddd.domain.user.model.*;
 import com.yugugugu.server.ddd.domain.user.repository.IUserRepository;
 import com.yugugugu.server.ddd.infrastructure.dao.*;
@@ -139,6 +140,36 @@ public class UserRepository implements IUserRepository {
             luckUserInfoList.add(userInfo);
         }
         return luckUserInfoList;
+    }
+
+    @Override
+    public void addTalkBoxInfo(String userId, String talkId, int talkType) {
+        TalkBox talkBox = talkBoxDao.queryTalkBox(userId, talkId, talkType);
+        if (talkBox == null){
+            talkBoxDao.addTalkBoxInfo(userId,talkId,talkType);
+        }
+    }
+
+    @Override
+    public void deleteUserTalk(String userId, String talkId) {
+        talkBoxDao.deleteUserTalk(userId,talkId);
+    }
+
+    @Override
+    public void appendChatRecord(ChatRecordInfo chatRecordInfo) {
+        ChatRecord chatRecord = new ChatRecord();
+        chatRecord.setUserId(chatRecordInfo.getUserId());
+        chatRecord.setFriendId(chatRecordInfo.getFriendId());
+        chatRecord.setMsgContent(chatRecordInfo.getMsgContent());
+        chatRecord.setMsgType(chatRecordInfo.getMsgType());
+        chatRecord.setMsgDate(chatRecordInfo.getMsgDate());
+        chatRecord.setTalkType(chatRecordInfo.getTalkType());
+        chatRecordDao.appendChatRecord(chatRecord);
+    }
+
+    @Override
+    public TalkBox queryTalkBox(String userId, String talkId, int talkType) {
+        return talkBoxDao.queryTalkBox(userId,talkId,talkType);
     }
 
 

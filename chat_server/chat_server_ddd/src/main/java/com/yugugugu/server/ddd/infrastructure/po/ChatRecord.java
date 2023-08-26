@@ -3,6 +3,8 @@ package com.yugugugu.server.ddd.infrastructure.po;
 
 import lombok.Data;
 
+import java.util.Date;
+
 @Data
 public class ChatRecord {
 
@@ -10,9 +12,9 @@ public class ChatRecord {
   private String userId;
   private String friendId;
   private String msgContent;
-  private java.sql.Timestamp msgDate;
-  private java.sql.Timestamp createTime;
-  private java.sql.Timestamp updateTime;
+  private Date msgDate;
+  private Date createTime;
+  private Date updateTime;
   private Integer talkType;
   private Integer msgType;
 

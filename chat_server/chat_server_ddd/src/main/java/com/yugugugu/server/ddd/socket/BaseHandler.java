@@ -35,10 +35,10 @@ public abstract class BaseHandler<T> extends SimpleChannelInboundHandler<T> {
         SocketChannelUtil.removeChannelGroupByChannel(ctx.channel());
     }
 
-    @Override
-    public void exceptionCaught(ChannelHandlerContext ctx, Throwable cause) throws Exception {
-        log.error("服务端异常断开", cause.getMessage());
-        SocketChannelUtil.removeChannel(ctx.channel().id().toString());
-        SocketChannelUtil.removeChannelGroupByChannel(ctx.channel());
-    }
+//    @Override
+//    public void exceptionCaught(ChannelHandlerContext ctx, Throwable cause) throws Exception {
+//        log.error("服务端异常断开{}", cause.getMessage());
+////        SocketChannelUtil.removeChannel(ctx.channel().id().toString());
+////        SocketChannelUtil.removeChannelGroupByChannel(ctx.channel());
+//    }
 }

@@ -1,30 +1,69 @@
-2023-07-24 22:48:58  [ JavaFX Application Thread:0 ] - [ INFO ]  NettyClient连接服务开始 inetHost：127.0.0.1 inetPort：7397
-2023-07-24 22:49:00  [ JavaFX Application Thread:2112 ] - [ INFO ]  NettyClient连接服务完成 /127.0.0.1:5146
-2023-07-24 22:49:09  [ nioEventLoopGroup-2-1:10847 ] - [ WARN ]  登录失败
-2023-07-24 22:49:47  [ nioEventLoopGroup-2-1:48739 ] - [ WARN ]  登录失败
-2023-07-24 22:49:50  [ nioEventLoopGroup-2-1:51589 ] - [ WARN ]  登录失败
-2023-07-24 22:50:03  [ nioEventLoopGroup-2-1:64803 ] - [ WARN ]  登录失败
-2023-07-24 22:50:39  [ nioEventLoopGroup-2-1:100673 ] - [ WARN ]  登录失败
-2023-07-24 22:50:44  [ nioEventLoopGroup-2-1:105578 ] - [ WARN ]  登录失败
-2023-07-24 22:51:33  [ nioEventLoopGroup-2-1:155193 ] - [ WARN ]  登录失败
-2023-07-24 22:51:35  [ nioEventLoopGroup-2-1:156619 ] - [ WARN ]  登录失败
-2023-07-24 22:51:40  [ nioEventLoopGroup-2-1:162442 ] - [ WARN ]  登录失败
-2023-07-24 23:00:55  [ JavaFX Application Thread:0 ] - [ INFO ]  NettyClient连接服务开始 inetHost：127.0.0.1 inetPort：7397
-2023-07-24 23:00:56  [ JavaFX Application Thread:1736 ] - [ INFO ]  NettyClient连接服务完成 /127.0.0.1:9187
-2023-07-24 23:01:12  [ nioEventLoopGroup-2-1:17568 ] - [ WARN ]  登录失败
-2023-07-24 23:01:12  [ nioEventLoopGroup-2-1:17873 ] - [ WARN ]  登录失败
-2023-07-24 23:01:38  [ nioEventLoopGroup-2-1:43487 ] - [ WARN ]  登录失败
-2023-07-24 23:04:27  [ nioEventLoopGroup-2-1:212616 ] - [ WARN ]  登录失败
-2023-07-24 23:04:47  [ JavaFX Application Thread:0 ] - [ INFO ]  NettyClient连接服务开始 inetHost：127.0.0.1 inetPort：7397
-2023-07-24 23:04:49  [ JavaFX Application Thread:1847 ] - [ INFO ]  NettyClient连接服务完成 /127.0.0.1:10578
-2023-07-24 23:08:16  [ JavaFX Application Thread:0 ] - [ INFO ]  NettyClient连接服务开始 inetHost：127.0.0.1 inetPort：7397
-2023-07-24 23:08:17  [ JavaFX Application Thread:1788 ] - [ INFO ]  NettyClient连接服务完成 /127.0.0.1:11741
-2023-07-24 23:08:30  [ nioEventLoopGroup-2-1:14116 ] - [ ERROR ]  java.lang.IllegalStateException
-2023-07-24 23:08:32  [ nioEventLoopGroup-2-1:16069 ] - [ ERROR ]  关闭acdf85ce
-2023-07-24 23:16:13  [ nioEventLoopGroup-2-1:477249 ] - [ ERROR ]  java.lang.IllegalStateException
-2023-07-24 23:16:13  [ nioEventLoopGroup-2-1:477250 ] - [ ERROR ]  关闭acdf85ce
-2023-07-24 23:18:49  [ JavaFX Application Thread:0 ] - [ INFO ]  NettyClient连接服务开始 inetHost：127.0.0.1 inetPort：7397
-2023-07-24 23:18:51  [ JavaFX Application Thread:1784 ] - [ INFO ]  NettyClient连接服务完成 /127.0.0.1:1714
-2023-07-24 23:21:17  [ JavaFX Application Thread:0 ] - [ INFO ]  NettyClient连接服务开始 inetHost：127.0.0.1 inetPort：7397
-2023-07-24 23:21:19  [ JavaFX Application Thread:1549 ] - [ INFO ]  NettyClient连接服务完成 /127.0.0.1:2613
-2023-07-24 23:21:52  [ JavaFX Application Thread:34581 ] - [ INFO ]  退出登陆！
+2023-08-14 21:14:37  [ JavaFX Application Thread:0 ] - [ INFO ]  NettyClient连接服务开始 inetHost：127.0.0.1 inetPort：7397
+2023-08-14 21:14:41  [ JavaFX Application Thread:3875 ] - [ INFO ]  NettyClient连接服务完成 /127.0.0.1:3054
+2023-08-14 21:14:48  [ JavaFX Application Thread:0 ] - [ INFO ]  NettyClient连接服务开始 inetHost：127.0.0.1 inetPort：7397
+2023-08-14 21:14:49  [ JavaFX Application Thread:1770 ] - [ INFO ]  NettyClient连接服务完成 /127.0.0.1:3114
+2023-08-14 21:25:59  [ JavaFX Application Thread:682210 ] - [ INFO ]  退出登陆！
+2023-08-14 21:26:00  [ JavaFX Application Thread:672789 ] - [ INFO ]  退出登陆！
+2023-08-14 21:26:28  [ JavaFX Application Thread:0 ] - [ INFO ]  NettyClient连接服务开始 inetHost：127.0.0.1 inetPort：7397
+2023-08-14 21:26:30  [ JavaFX Application Thread:1578 ] - [ INFO ]  NettyClient连接服务完成 /127.0.0.1:7043
+2023-08-14 21:26:32  [ JavaFX Application Thread:0 ] - [ INFO ]  NettyClient连接服务开始 inetHost：127.0.0.1 inetPort：7397
+2023-08-14 21:26:34  [ JavaFX Application Thread:1606 ] - [ INFO ]  NettyClient连接服务完成 /127.0.0.1:7083
+2023-08-14 21:27:41  [ nioEventLoopGroup-2-1:69191 ] - [ ERROR ]  java.lang.IllegalStateException
+2023-08-14 21:27:41  [ nioEventLoopGroup-2-1:69246 ] - [ ERROR ]  关闭2f6783f8
+2023-08-14 21:28:01  [ nioEventLoopGroup-2-1:93037 ] - [ ERROR ]  java.lang.IllegalStateException
+2023-08-14 21:28:01  [ nioEventLoopGroup-2-1:93047 ] - [ ERROR ]  关闭00166c95
+2023-08-14 21:28:10  [ nioEventLoopGroup-2-1:98413 ] - [ ERROR ]  java.lang.IllegalStateException
+2023-08-14 21:28:10  [ nioEventLoopGroup-2-1:98413 ] - [ ERROR ]  关闭2f6783f8
+2023-08-14 21:28:22  [ nioEventLoopGroup-2-1:114344 ] - [ ERROR ]  java.lang.IllegalStateException
+2023-08-14 21:28:22  [ nioEventLoopGroup-2-1:114344 ] - [ ERROR ]  关闭00166c95
+2023-08-14 21:29:02  [ nioEventLoopGroup-2-1:150216 ] - [ ERROR ]  java.lang.IllegalStateException
+2023-08-14 21:29:02  [ nioEventLoopGroup-2-1:150216 ] - [ ERROR ]  关闭2f6783f8
+2023-08-14 21:29:17  [ nioEventLoopGroup-2-1:169071 ] - [ ERROR ]  java.lang.IllegalStateException
+2023-08-14 21:29:17  [ nioEventLoopGroup-2-1:169071 ] - [ ERROR ]  关闭00166c95
+2023-08-14 21:29:39  [ nioEventLoopGroup-2-1:187052 ] - [ ERROR ]  java.lang.IllegalStateException
+2023-08-14 21:29:39  [ nioEventLoopGroup-2-1:187052 ] - [ ERROR ]  关闭2f6783f8
+2023-08-14 21:29:46  [ nioEventLoopGroup-2-1:197594 ] - [ ERROR ]  java.lang.IllegalStateException
+2023-08-14 21:29:46  [ nioEventLoopGroup-2-1:197595 ] - [ ERROR ]  关闭00166c95
+2023-08-14 21:34:07  [ JavaFX Application Thread:0 ] - [ INFO ]  NettyClient连接服务开始 inetHost：127.0.0.1 inetPort：7397
+2023-08-14 21:34:09  [ JavaFX Application Thread:1620 ] - [ INFO ]  NettyClient连接服务完成 /127.0.0.1:9618
+2023-08-14 21:34:12  [ JavaFX Application Thread:0 ] - [ INFO ]  NettyClient连接服务开始 inetHost：127.0.0.1 inetPort：7397
+2023-08-14 21:34:14  [ JavaFX Application Thread:1555 ] - [ INFO ]  NettyClient连接服务完成 /127.0.0.1:9664
+2023-08-14 21:35:02  [ nioEventLoopGroup-2-1:54337 ] - [ ERROR ]  java.lang.IllegalStateException
+2023-08-14 21:35:02  [ nioEventLoopGroup-2-1:54347 ] - [ ERROR ]  关闭f7f89a5d
+2023-08-14 21:52:09  [ JavaFX Application Thread:0 ] - [ INFO ]  NettyClient连接服务开始 inetHost：127.0.0.1 inetPort：7397
+2023-08-14 21:52:10  [ JavaFX Application Thread:1541 ] - [ INFO ]  NettyClient连接服务完成 /127.0.0.1:1686
+2023-08-14 21:52:37  [ nioEventLoopGroup-2-1:28374 ] - [ WARN ]  登录失败
+2023-08-14 21:52:37  [ nioEventLoopGroup-2-1:28539 ] - [ WARN ]  登录失败
+2023-08-14 21:52:43  [ JavaFX Application Thread:0 ] - [ INFO ]  NettyClient连接服务开始 inetHost：127.0.0.1 inetPort：7397
+2023-08-14 21:52:45  [ JavaFX Application Thread:1550 ] - [ INFO ]  NettyClient连接服务完成 /127.0.0.1:1896
+2023-08-14 21:57:18  [ nioEventLoopGroup-2-1:274842 ] - [ ERROR ]  远程主机强迫关闭了一个现有的连接。
+2023-08-14 21:57:18  [ nioEventLoopGroup-2-1:309407 ] - [ ERROR ]  远程主机强迫关闭了一个现有的连接。
+2023-08-14 21:57:18  [ nioEventLoopGroup-2-1:274853 ] - [ ERROR ]  关闭12e68eb2
+2023-08-14 21:57:18  [ nioEventLoopGroup-2-1:309418 ] - [ ERROR ]  关闭db0aa529
+2023-08-14 21:57:35  [ JavaFX Application Thread:326686 ] - [ INFO ]  退出登陆！
+2023-08-14 21:57:39  [ JavaFX Application Thread:0 ] - [ INFO ]  NettyClient连接服务开始 inetHost：127.0.0.1 inetPort：7397
+2023-08-14 21:57:41  [ JavaFX Application Thread:2207 ] - [ INFO ]  NettyClient连接服务完成 /127.0.0.1:3645
+2023-08-14 21:57:46  [ JavaFX Application Thread:0 ] - [ INFO ]  NettyClient连接服务开始 inetHost：127.0.0.1 inetPort：7397
+2023-08-14 21:57:48  [ JavaFX Application Thread:1841 ] - [ INFO ]  NettyClient连接服务完成 /127.0.0.1:3697
+2023-08-14 22:01:24  [ JavaFX Application Thread:0 ] - [ INFO ]  NettyClient连接服务开始 inetHost：127.0.0.1 inetPort：7397
+2023-08-14 22:01:26  [ JavaFX Application Thread:1887 ] - [ INFO ]  NettyClient连接服务完成 /127.0.0.1:4914
+2023-08-14 22:01:29  [ JavaFX Application Thread:0 ] - [ INFO ]  NettyClient连接服务开始 inetHost：127.0.0.1 inetPort：7397
+2023-08-14 22:01:31  [ JavaFX Application Thread:1987 ] - [ INFO ]  NettyClient连接服务完成 /127.0.0.1:4957
+2023-08-14 22:04:12  [ nioEventLoopGroup-2-1:162543 ] - [ ERROR ]  远程主机强迫关闭了一个现有的连接。
+2023-08-14 22:04:12  [ nioEventLoopGroup-2-1:167110 ] - [ ERROR ]  远程主机强迫关闭了一个现有的连接。
+2023-08-14 22:04:12  [ nioEventLoopGroup-2-1:167111 ] - [ ERROR ]  关闭7038cfa3
+2023-08-14 22:04:12  [ nioEventLoopGroup-2-1:162553 ] - [ ERROR ]  关闭699ad6f3
+2023-08-14 22:04:59  [ JavaFX Application Thread:0 ] - [ INFO ]  NettyClient连接服务开始 inetHost：127.0.0.1 inetPort：7397
+2023-08-14 22:05:01  [ JavaFX Application Thread:1784 ] - [ INFO ]  NettyClient连接服务完成 /127.0.0.1:6206
+2023-08-14 22:05:03  [ JavaFX Application Thread:0 ] - [ INFO ]  NettyClient连接服务开始 inetHost：127.0.0.1 inetPort：7397
+2023-08-14 22:05:05  [ JavaFX Application Thread:1873 ] - [ INFO ]  NettyClient连接服务完成 /127.0.0.1:6253
+2023-08-14 22:14:44  [ nioEventLoopGroup-2-1:585601 ] - [ ERROR ]  远程主机强迫关闭了一个现有的连接。
+2023-08-14 22:14:44  [ nioEventLoopGroup-2-1:581075 ] - [ ERROR ]  远程主机强迫关闭了一个现有的连接。
+2023-08-14 22:14:44  [ nioEventLoopGroup-2-1:581084 ] - [ ERROR ]  关闭4b8f2ba6
+2023-08-14 22:14:44  [ nioEventLoopGroup-2-1:585611 ] - [ ERROR ]  关闭694a1113
+2023-08-14 22:15:05  [ JavaFX Application Thread:0 ] - [ INFO ]  NettyClient连接服务开始 inetHost：127.0.0.1 inetPort：7397
+2023-08-14 22:15:07  [ JavaFX Application Thread:1725 ] - [ INFO ]  NettyClient连接服务完成 /127.0.0.1:9541
+2023-08-14 22:15:14  [ JavaFX Application Thread:0 ] - [ INFO ]  NettyClient连接服务开始 inetHost：127.0.0.1 inetPort：7397
+2023-08-14 22:15:15  [ JavaFX Application Thread:1609 ] - [ INFO ]  NettyClient连接服务完成 /127.0.0.1:9607
+2023-08-14 22:22:57  [ JavaFX Application Thread:462913 ] - [ INFO ]  退出登陆！
+2023-08-14 22:22:58  [ JavaFX Application Thread:472906 ] - [ INFO ]  退出登陆！

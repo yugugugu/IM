@@ -49,12 +49,12 @@ public class LoginHandler extends SimpleChannelInboundHandler<LoginResponse> {
                             for (int i = userRecordList.size() - 1; i >= 0; i--) {
                                 ChatRecordDto chatRecord = userRecordList.get(i);
                                 //  自己的消息
-                                if (0 == chatRecord.getMsgType()) {
+                                if (0 == chatRecord.getMsgUserType()) {
                                     chat.addTalkMsgRight(chatRecord.getTalkId(), chatRecord.getMsgContent(), chatRecord.getMsgType(), chatRecord.getMsgDate(), true, false, false);
                                     continue;
                                 }
                                 // 好友的消息
-                                if (1 == chatRecord.getMsgType()) {
+                                if (1 == chatRecord.getMsgUserType()) {
                                     chat.addTalkMsgUserLeft(chatRecord.getTalkId(), chatRecord.getMsgContent(), chatRecord.getMsgType(), chatRecord.getMsgDate(), true, false, false);
                                 }
                             }

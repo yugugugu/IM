@@ -1,11 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.yugugugu.server.ddd.infrastructure.dao.ITalkBoxDao">
+    <insert id="addTalkBoxInfo">
+        insert into talk_box values (null,#{userId},#{talkId},#{talkType},now(),now())
+    </insert>
+    <delete id="deleteUserTalk">
+        delete from talk_box where talkId = #{talkId} and userId = #{userId}
+    </delete>
     <select id="queryTalkBoxList" parameterType="java.lang.String"
             resultType="com.yugugugu.server.ddd.infrastructure.po.TalkBox">
         select talkId,talkType from talk_box where userId = #{userId}
     </select>
-
+    <select id="queryTalkBox" resultType="com.yugugugu.server.ddd.infrastructure.po.TalkBox">
+        select userId,talkId,talkType,createTime,updateTime from talk_box
+        where userId = #{userId} and talkId = #{talkId} and talkType=#{talkType}
+    </select>
 
 
 </mapper>

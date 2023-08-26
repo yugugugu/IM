@@ -1,11 +1,10 @@
 package com.yugugugu.client.socket;
 
 import com.yugugugu.client.application.UIService;
-import com.yugugugu.client.socket.handler.AddFriendHandler;
-import com.yugugugu.client.socket.handler.LoginHandler;
-import com.yugugugu.client.socket.handler.SearchFriendHandler;
+import com.yugugugu.client.socket.handler.*;
 import com.yugugugu.server.aggement.codec.ObjDecoder;
 import com.yugugugu.server.aggement.codec.ObjEncoder;
+import com.yugugugu.server.aggement.protocol.msg.MsgGroupResponse;
 import io.netty.channel.ChannelInitializer;
 import io.netty.channel.ChannelPipeline;
 import io.netty.channel.socket.SocketChannel;
@@ -28,6 +27,9 @@ public class MyChannelInitializer extends ChannelInitializer<SocketChannel> {
         pipeline.addLast(new AddFriendHandler(uiService));
         pipeline.addLast(new SearchFriendHandler(uiService));
 
+        pipeline.addLast(new MsgHandler(uiService));
+        pipeline.addLast(new TalkNoticeHandler(uiService));
+        pipeline.addLast(new MsgGroupHandler(uiService));
         pipeline.addLast(new ObjEncoder());
     }
 }

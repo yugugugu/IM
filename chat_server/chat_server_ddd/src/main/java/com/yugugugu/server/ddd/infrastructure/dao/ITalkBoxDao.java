@@ -10,4 +10,10 @@ import java.util.List;
 @Mapper
 public interface ITalkBoxDao extends BaseMapper<TalkBox> {
     List<TalkBox> queryTalkBoxList(String userId);
+
+    void addTalkBoxInfo(String userId, String talkId, int talkType);
+
+    void deleteUserTalk(String userId, String talkId);
+
+    TalkBox queryTalkBox(String userId, String talkId, int talkType);
 }

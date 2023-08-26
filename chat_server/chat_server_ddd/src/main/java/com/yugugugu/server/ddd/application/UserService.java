@@ -33,4 +33,10 @@ public interface UserService {
     void addUserFriend(List<UserFriend> userFriendList);
 
     List<LuckUserInfo> queryFuzzUserInfoList(String userId, String searchKey);
+
+    void addTalkBoxInfo(String userId, String friendUserId, int i);
+
+    void deleteUserTalk(String userId, String talkId);
+
+    void asyncAppendChatRecord(ChatRecordInfo chatRecordInfo);
 }

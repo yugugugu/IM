@@ -7,8 +7,7 @@
         VALUES
             ( #{userId}, #{friendId}, #{talkType}, #{msgContent}, #{msgType}, #{msgDate}, now(), now() )
     </insert>
-
-
+    <insert id="asyncAppendChatRecord"></insert>
 
 
     <select id="queryGroupsChatRecordList" parameterType="java.lang.String" resultType="com.yugugugu.server.ddd.infrastructure.po.ChatRecord">
