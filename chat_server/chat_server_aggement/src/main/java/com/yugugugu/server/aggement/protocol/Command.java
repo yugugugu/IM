@@ -22,5 +22,6 @@ public interface Command {
     Byte MsgGroupResponse = 13;
 
     Byte ReconnectRequest = 14;
+    Byte HeartRequest = 15;
 
 }

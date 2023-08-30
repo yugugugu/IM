@@ -7,6 +7,7 @@ import com.yugugugu.server.ddd.socket.handler.*;
 import io.netty.channel.ChannelInitializer;
 import io.netty.channel.ChannelPipeline;
 import io.netty.channel.socket.SocketChannel;
+import io.netty.handler.timeout.IdleStateHandler;
 
 import javax.swing.*;
 
@@ -29,6 +30,8 @@ public class MyChannelInitializer extends ChannelInitializer<SocketChannel> {
         pipeline.addLast(new TalkNoticeHandler(userService));
         pipeline.addLast(new MsgHandler(userService));
         pipeline.addLast(new MsgGroupHandler(userService));
+        pipeline.addLast(new IdleStateHandler(10,10,10));
+        pipeline.addLast(new HeartHandler(userService));
         pipeline.addLast(new ObjEncoder());//处理完之后把数据对象转为二进制字节发出去
     }
 }

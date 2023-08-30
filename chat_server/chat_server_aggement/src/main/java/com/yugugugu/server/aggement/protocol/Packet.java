@@ -4,6 +4,7 @@ import com.yugugugu.server.aggement.protocol.friends.AddFriendRequest;
 import com.yugugugu.server.aggement.protocol.friends.AddFriendResponse;
 import com.yugugugu.server.aggement.protocol.friends.SearchFriendRequest;
 import com.yugugugu.server.aggement.protocol.friends.SearchFriendResponse;
+import com.yugugugu.server.aggement.protocol.heart.HeartRequest;
 import com.yugugugu.server.aggement.protocol.login.LoginRequest;
 import com.yugugugu.server.aggement.protocol.login.LoginResponse;
 import com.yugugugu.server.aggement.protocol.msg.MsgGroupRequest;
@@ -32,6 +33,7 @@ public abstract class Packet {
         packetType.put(Command.MsgResponse, MsgResponse.class);
         packetType.put(Command.MsgGroupRequest, MsgGroupRequest.class);
         packetType.put(Command.MsgGroupResponse, MsgGroupResponse.class);
+        packetType.put(Command.HeartRequest, HeartRequest.class);
     }
 
     public static Class<? extends Packet> get(Byte command) {

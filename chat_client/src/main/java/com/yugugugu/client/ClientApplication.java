@@ -5,6 +5,8 @@ import com.yugugugu.client.event.ChatEvent;
 import com.yugugugu.client.event.LoginEvent;
 import com.yugugugu.client.infrastructure.util.CacheUtil;
 import com.yugugugu.client.socket.NettyClient;
+import com.yugugugu.server.aggement.protocol.heart.HeartRequest;
+import com.yugugugu.server.aggement.protocol.login.ReconnectRequest;
 import com.yugugugu.view.chat.ChatController;
 import com.yugugugu.view.chat.IChatMethod;
 import com.yugugugu.view.login.ILoginMethod;
@@ -15,7 +17,7 @@ import lombok.extern.slf4j.Slf4j;
 
 import java.util.concurrent.*;
 
-import static com.yugugugu.server.aggement.protocol.Command.ReconnectRequest;
+
 
 @Slf4j
 public class ClientApplication extends javafx.application.Application{
@@ -52,19 +54,22 @@ public class ClientApplication extends javafx.application.Application{
         log.info("NettyClient连接服务完成 {}", channel.localAddress());
 
         // Channel状态定时巡检；3秒后每5秒执行一次
-//        scheduledExecutorService.scheduleAtFixedRate(() -> {
-//            while (!nettyClient.isActive()) {
-//                System.out.println("通信管道巡检：通信管道状态 " + nettyClient.isActive());
-//                try {
-//                    System.out.println("通信管道巡检：断线重连[Begin]");
-//                    Channel freshChannel = executorService.submit(nettyClient).get();
-//                    if (null == CacheUtil.userId) continue;
-//                    freshChannel.writeAndFlush(new ReconnectRequest(CacheUtil.userId));
-//                } catch (InterruptedException | ExecutionException e) {
-//                    System.out.println("通信管道巡检：断线重连[Error]");
-//                }
-//            }
-//        }, 3, 5, TimeUnit.SECONDS);
+        scheduledExecutorService.scheduleAtFixedRate(() -> {
+            while (!nettyClient.isActive()) {
+                log.info("通信管道巡检：通信管道状态 " + nettyClient.isActive());
+                try {
+                    log.info("通信管道巡检：断线重连开始,channelId为：{}",nettyClient.channel().id().toString());
+                    Channel freshChannel = executorService.submit(nettyClient).get();
+                    if (null == CacheUtil.userId) continue;
+                    freshChannel.writeAndFlush(new ReconnectRequest(CacheUtil.userId));
+                } catch (InterruptedException | ExecutionException e) {
+
+                    log.info("通信管道巡检：断线重连失败");
+                }
+            }
+            Channel myChannel = nettyClient.channel();
+            myChannel.writeAndFlush(new HeartRequest());
+        }, 3, 5, TimeUnit.SECONDS);
     }
 
     public static void main(String[] args) {

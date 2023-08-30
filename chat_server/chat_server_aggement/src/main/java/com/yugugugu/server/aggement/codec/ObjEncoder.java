@@ -14,7 +14,7 @@ public class ObjEncoder extends MessageToByteEncoder<Packet> {
     @Override
     protected void encode(ChannelHandlerContext channelHandlerContext, Packet in, ByteBuf byteBuf) throws Exception {
         byte[] data = SerializationUtil.serialize(in);
-        byteBuf.writeInt(data.length+1);//这要加1呢？？
+        byteBuf.writeInt(data.length+1);//这要加1呢
         byteBuf.writeByte(in.getCommand());
         byteBuf.writeBytes(data);
     }

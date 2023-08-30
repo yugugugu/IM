@@ -13,6 +13,7 @@ public class SocketChannelUtil {
     //保存用户连接信息
     private static Map<String, Channel> userChannel = new ConcurrentHashMap<>();
     private static Map<String, String> userChannelId = new ConcurrentHashMap<>();
+    private static Map<String, String> channelIdUser = new ConcurrentHashMap<>();
 
     //群组
     private static Map<String, ChannelGroup> channelGroupMap = new ConcurrentHashMap<>();
@@ -26,6 +27,9 @@ public class SocketChannelUtil {
         String userId = userChannelId.get(channelId);
         if (null == userId) return;
         userChannel.remove(userId);
+    }
+    public static String getUserIdByChannelId(String channelId){
+        return userChannelId.get(channelId);
     }
 
     public static void removeUserChannelByUserId(String userId){
