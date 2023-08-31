@@ -21,4 +21,16 @@ public class Constants {
             return info;
         }
     }
+
+    public enum WordType{
+        BLACK,WHITE
+    }
+
+    public enum EndType {
+
+        /**
+         * 有下一个，结束
+         */
+        HAS_NEXT, IS_END
+    }
 }

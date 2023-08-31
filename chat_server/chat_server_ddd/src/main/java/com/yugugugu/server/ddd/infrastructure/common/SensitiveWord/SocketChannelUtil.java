@@ -1,4 +1,4 @@
-package com.yugugugu.server.ddd.infrastructure.common;
+package com.yugugugu.server.ddd.infrastructure.common.SensitiveWord;
 
 import io.netty.channel.Channel;
 import io.netty.channel.group.ChannelGroup;
