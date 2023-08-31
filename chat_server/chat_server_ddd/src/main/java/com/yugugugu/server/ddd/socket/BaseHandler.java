@@ -1,7 +1,7 @@
 package com.yugugugu.server.ddd.socket;
 
 import com.yugugugu.server.ddd.application.UserService;
-import com.yugugugu.server.ddd.infrastructure.common.SensitiveWord.SocketChannelUtil;
+import com.yugugugu.server.ddd.infrastructure.common.SocketChannelUtil;
 import io.netty.channel.Channel;
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.SimpleChannelInboundHandler;
