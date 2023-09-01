@@ -1,8 +1,12 @@
 package com.yugugugu.server.ddd.infrastructure.common.SensitiveWord;
 
+import com.yugugugu.server.ddd.infrastructure.common.Constants;
 import com.yugugugu.server.ddd.infrastructure.common.SensitiveWord.WordContext;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Map;
+import java.util.Objects;
 
 /**
  * @author liuyu
@@ -72,8 +76,92 @@ public class WordFilter {
         return new String(charset);
     }
 
-    private FlagIndex getFlagIndex(char[] charset, int i, int skip) {
-        return null;
+    private FlagIndex getFlagIndex(char[] charset, int begin, int skip) {
+        FlagIndex fi = new FlagIndex();
+
+        Map current = wordMap;
+        boolean flag = false;
+        int count = 0;
+        List<Integer> index = new ArrayList<>();
+        for (int i = begin; i < charset.length; i++) {
+            char word = charset[i];
+            Map mapTree = (Map) current.get(word);
+            if (count > skip || (i == begin && Objects.isNull(mapTree))) {
+                break;
+            }
+            if (Objects.nonNull(mapTree)) {
+                current = mapTree;
+                count = 0;
+                index.add(i);
+            } else {
+                count++;
+                if (flag && count > skip) {
+                    break;
+                }
+            }
+            if (Constants.EndType.IS_END.ordinal()==(int)current.get("isEnd")) {
+                flag = true;
+            }
+            if (Constants.WordType.WHITE.ordinal()==(int)current.get("isWhiteWord")) {
+                fi.setWhiteWord(true);
+                break;
+            }
+        }
+
+        fi.setFlag(flag);
+        fi.setIndex(index);
+
+        return fi;
+    }
+
+    /**
+     * 获取敏感词列表
+     *
+     * @param text 输入文本
+     * @param skip 文本距离
+     */
+    public List<String> wordList(final String text, final int skip) {
+        List<String> wordList = new ArrayList<>();
+        char[] charset = text.toCharArray();
+        for (int i = 0; i < charset.length; i++) {
+            FlagIndex fi = getFlagIndex(charset, i, skip);
+            if (fi.isFlag()) {
+                if(fi.isWhiteWord()) {
+                    i += fi.getIndex().size() - 1;
+                } else {
+                    StringBuilder builder = new StringBuilder();
+                    for (int j : fi.getIndex()) {
+                        char word = text.charAt(j);
+                        builder.append(word);
+                    }
+                    wordList.add(builder.toString());
+                }
+            }
+        }
+        return wordList;
+    }
+
+
+    /**
+     * 获取敏感词数量
+     *
+     * @param text 输入文本
+     * @param skip 文本距离
+     */
+    public int wordCount(final String text, final int skip) {
+        int count = 0;
+        char[] charset = text.toCharArray();
+        for (int i = 0; i < charset.length; i++) {
+            FlagIndex fi = getFlagIndex(charset, i, skip);
+            if (fi.isFlag()) {
+                if(fi.isWhiteWord()) {
+                    i += fi.getIndex().size() - 1;
+                } else {
+                    count++;
+                }
+            }
+        }
+        return count;
     }
 
 }

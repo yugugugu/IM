@@ -8,10 +8,12 @@ import com.yugugugu.server.ddd.application.UserService;
 import com.yugugugu.server.ddd.domain.user.model.ChatRecordInfo;
 import com.yugugugu.server.ddd.domain.user.model.UserInfo;
 import com.yugugugu.server.ddd.infrastructure.common.Constants;
+import com.yugugugu.server.ddd.infrastructure.common.SensitiveWord.SensitiveWordUtils;
 import com.yugugugu.server.ddd.infrastructure.common.SocketChannelUtil;
 import com.yugugugu.server.ddd.socket.BaseHandler;
 import io.netty.channel.Channel;
 import lombok.extern.slf4j.Slf4j;
+import org.apache.tomcat.util.descriptor.tld.TldRuleSet;
 
 import java.util.Date;
 
@@ -47,6 +49,9 @@ public class MsgHandler extends BaseHandler<MsgRequest> {
                 "",
                 new Date()
                 ));
-        friendChannel.writeAndFlush(new MsgResponse(msg.getUserId(), msg.getMsgText(), msg.getMsgType(), msg.getMsgDate()));
+
+        //处理一下，做敏感词过滤
+        String repMsgText = SensitiveWordUtils.WORD_FILTER.replace(msg.getMsgText());
+        friendChannel.writeAndFlush(new MsgResponse(msg.getUserId(), repMsgText, msg.getMsgType(), msg.getMsgDate()));
     }
 }
